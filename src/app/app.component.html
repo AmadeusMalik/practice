@@ -1,1 +1,55 @@
-<app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
+<app-product-page></app-product-page>
+<h2>Responsive Registration Form</h2>
+<div class="form">
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <label for="fname"> First Name </label>
+        <input type="text" id="fname" placeholder="First Name..." formControlName="firstname" />
+        <br>
+        <label for="lname"> Last Name </label>
+        <input type="text" id="lname" placeholder="Last Name..." formControlName="lastname" />
+        <br>
+        <label for="email"> Email </label>
+        <input type="email" name="email" placeholder="Email..." formControlName="email" />
+        <br>
+        <label for="country"></label>
+        <select id="country" title="country" formControlName="country">
+            <option value="null">Select a country</option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa" selected>USA</option>
+        </select>
+        <br>
+        <label for="gender">Gender</label>
+        <input type="radio" id="male" value="male" formControlName="gender">
+        <label for="male"> Male </label>
+        <input type="radio" id="female" value="female" formControlName="gender">
+        <label for="female"> Female </label>
+        <br>
+        <label for="hobbies">Hobbies <i>(optional)</i></label><br>
+        <label><input type="radio" value="sports" formControlName="hobbies"> Sports </label>
+        <label><input type="radio" value="movies" formControlName="hobbies"> Movies </label>
+        <label><input type="radio" value="music" formControlName="hobbies"> Music </label>
+        <br>
+        <label for="phoneNumber"></label>
+        <input type="tel" placeholder="+1(000)000-0000" name="phoneNumber" formControlName="phoneNumber">
+        <br>
+        <input [disabled]="!reactiveForm.valid" type="submit" value="Submit" id="btn" />
+    </form>
+</div>
+<div class="form-data">
+    <h3>Form Data</h3>
+
+    <ul>
+        <li *ngFor="let userData of userData">
+            <p>First Name: {{userData.firstname}}</p>
+            <p>Last Name: {{userData.lastname}}</p>
+            <p>Email: {{userData.email}}</p>
+            <p>Gender: {{userData.gender}}</p>
+            <p>Country: {{userData.country}}</p>
+            <p>Hobbies: {{userData.hobbies}}</p>
+            <p>Phone Number: {{userData.phoneNumber}}</p>
+            <br>
+        </li>
+    </ul>
+</div>
+<router-outlet></router-outlet>

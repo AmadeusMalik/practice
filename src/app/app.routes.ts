@@ -1,3 +1,6 @@
 import { Route } from '@angular/router';
-
-export const appRoutes: Route[] = [];
+import { ProductPageComponent } from './product-page/product-page.component';
+export const appRoute: Route[] = [ 
+{path:'products', component: ProductPageComponent}
+    
+]
