@@ -5,16 +5,26 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { userdata } from './userData';
 
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ProductPageComponent } from './product-page/product-page.component';
 
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+//PrimeNg
+import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
+import { ImageModule } from 'primeng/image';
+import { InputTextModule } from 'primeng/inputtext';
 @Component({
   standalone: true,
   imports: [
     RouterModule,
     ReactiveFormsModule,
     CommonModule,
-    ProductPageComponent,
+    ButtonModule,
+    ToolbarModule,
+  InputTextModule,
+  ImageModule,
+
+  
+    
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -37,9 +47,9 @@ export class AppComponent implements OnInit {
         Validators.pattern(/^[^i]*$/i),
       ]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      gender: new FormControl('', Validators.required),
+      gender: new FormControl(''),
       country: new FormControl('', Validators.required),
-      hobbies: new FormControl('', Validators.required),
+      hobbies: new FormControl(''),
       phoneNumber: new FormControl('', [
         Validators.required,
         Validators.minLength(10),
