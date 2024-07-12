@@ -1,3 +1,53 @@
+//VariableChanges
+$primary:hsl(5, 85%, 63%);
+$secondary:hsl(240, 100%, 5%);
+
+
+//Bootstrap
+@import"../node_modules/bootstrap/scss/bootstrap";
+//PrimeNG
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
-@import "primeicons/primeicons.css";
+
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+@layer reset {
+    button
+    {
+        background-color: $primary;
+        border: none;
+        color:black;
+        width:50%;
+        height:40px;
+        padding: 5px,5px,5px,5px;
+    }
+    button:hover{
+        background-color: hsl(240, 100%, 5%);
+        color: white;
+    }
+
+}
+//Regular Items
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Bottom Section Artices
+
+.Number{
+    color: $primary;
+}
