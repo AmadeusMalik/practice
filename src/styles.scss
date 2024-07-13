@@ -1,7 +1,9 @@
 //VariableChanges
 $primary: hsl(5, 85%, 63%);
 $secondary: hsl(240, 100%, 5%);
-
+$text-color: hsl(36, 100%, 99%);
+$sub-text-color: hsl(233, 8%, 79%);
+$highlight:hsl(35, 77%, 62%);
 //Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
 //PrimeNG
@@ -10,8 +12,8 @@ $secondary: hsl(240, 100%, 5%);
 
 //Font
 @font-face {
-    font-family: 'Inter';
-    src: url('assets\fonts\Inter\static\Inter-Black.ttf');
+  font-family: 'Inter';
+  src: url('assets/fonts/Inter/static/Inter-Regular.ttf');
 }
 
 /* Order */
@@ -19,36 +21,78 @@ $secondary: hsl(240, 100%, 5%);
 
 /* Reset CSS */
 @layer reset {
-    button {
-        background-color: $primary;
-        border: none;
-        color: black;
-        width: 50%;
-        height: 40px;
-        padding: 5px, 5px, 5px, 5px;
-    }
+  button {
+    background-color: $primary;
+    border: none;
+    color: black;
+    width: 50%;
+    height: 40px;
+    padding: 5px, 5px, 5px, 5px;
+  }
 
-    button:hover {
-        background-color: $secondary;
-        color: white;
-    }
+  button:hover {
+    background-color: $secondary;
+    color: $text-color;
+  }
 }
 
 //Regular Items
-
 body {
-    //Font
-    font-family: 'Inter';
-    font-weight: 400;
-    font-size: 15px;
-    //Size
-    max-width: 1440px;
-    min-width: 320px;
-    max-height: 100vh;
+  //Font
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 15px;
+  //Size
+  max-width: 1440px;
+  min-width: 320px;
+  max-height: 100vh;
 }
 
+//New Articles Section
+.New-Articles {
+  background-color: $secondary;
+  color: $text-color;
+  padding:30px 10px 30px 30px ;
+  text-align: start;
+  justify-content: center;
+  align-items: center;
+  .New{
+color: $highlight ;
+font-size: 35px;
+font-weight: 700;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .sub-text{
+    color:$sub-text-color;
+  }
+
+  .space {
+    background-color: aliceblue;
+    width: 100%;
+    height: 1px;
+  }
+}
+
+
 //Bottom Section Artices
+@media screen and (min-width: 978px) {
+   .Row{
+display: flex;
+flex-direction: row;
+   }
+}
+
+    .padding{
+margin-right: 50px;
+    }
+ 
 
 .Number {
-    color: $primary;
+    font-weight: 700;
+    font-size: 30px;
+  color: $primary;
 }
