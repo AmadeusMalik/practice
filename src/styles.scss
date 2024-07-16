@@ -4,6 +4,10 @@ $secondary: hsl(240, 100%, 5%);
 $text-color: hsl(36, 100%, 99%);
 $sub-text-color: hsl(233, 8%, 79%);
 $highlight:hsl(35, 77%, 62%);
+$art-Sub-Color: hsl(236, 13%, 42%);
+
+
+
 //Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
 //PrimeNG
@@ -47,6 +51,9 @@ body {
   min-width: 320px;
   max-height: 100vh;
 }
+.sub-Text{
+  color:$sub-text-color;
+}
 
 //New Articles Section
 .New-Articles {
@@ -66,9 +73,7 @@ font-weight: 700;
     font-size: 18px;
     font-weight: 700;
   }
-  .sub-text{
-    color:$sub-text-color;
-  }
+ 
 
   .space {
     background-color: aliceblue;
@@ -84,6 +89,15 @@ font-weight: 700;
 display: flex;
 flex-direction: row;
    }
+}
+.art-Title{
+  font-size: 15px;
+color: $secondary;
+font-weight: 700;
+}
+.art-Sub-Title{
+  font-size: small;
+color:$art-Sub-Color ;
 }
 
     .padding{
