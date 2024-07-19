@@ -13,6 +13,7 @@ $art-Sub-Color: hsl(236, 13%, 42%);
 //PrimeNG
 @import 'primeng/resources/themes/lara-light-blue/theme.css';
 @import 'primeng/resources/primeng.css';
+@import "primeicons/primeicons.css";
 
 //Font
 @font-face {
@@ -25,6 +26,11 @@ $art-Sub-Color: hsl(236, 13%, 42%);
 
 /* Reset CSS */
 @layer reset {
+  @media screen and (max-width: 989px) {
+   .margin{
+    margin-bottom: 100px;
+   }
+ }
   button {
     background-color: $primary;
     border: none;
@@ -32,6 +38,7 @@ $art-Sub-Color: hsl(236, 13%, 42%);
     width: 50%;
     height: 40px;
     padding: 5px, 5px, 5px, 5px;
+   
   }
 
   button:hover {
@@ -50,11 +57,14 @@ body {
   max-width: 1440px;
   min-width: 320px;
   max-height: 100vh;
+  margin: 0%;
 }
 .sub-Text{
   color:$sub-text-color;
 }
-
+.btn{
+  width: 200px;
+}
 //New Articles Section
 .New-Articles {
   background-color: $secondary;
@@ -84,7 +94,7 @@ font-weight: 700;
 
 
 //Bottom Section Artices
-@media screen and (min-width: 978px) {
+@media screen and (min-width: 990px) {
    .Row{
 display: flex;
 flex-direction: row;

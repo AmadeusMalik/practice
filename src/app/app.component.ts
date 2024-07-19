@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
 import { userdata } from './userData';
 
 
@@ -12,6 +13,7 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { ImageModule } from 'primeng/image';
 import { InputTextModule } from 'primeng/inputtext';
+import { SidebarModule } from 'primeng/sidebar';
 @Component({
   standalone: true,
   imports: [
@@ -22,6 +24,7 @@ import { InputTextModule } from 'primeng/inputtext';
     ToolbarModule,
   InputTextModule,
   ImageModule,
+  SidebarModule,
 
   
     
@@ -34,6 +37,12 @@ export class AppComponent implements OnInit {
   title = 'practice';
   reactiveForm!: FormGroup;
   userData = [...userdata];
+  sideBarVisible = false ;
+
+  isSideBarVisible(){
+  this.sideBarVisible = true;
+  console.log("push");
+  }
 
   ngOnInit() {
     this.reactiveForm = new FormGroup({
