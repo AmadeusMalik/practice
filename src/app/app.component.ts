@@ -14,6 +14,7 @@ import { ButtonModule } from 'primeng/button';
 import { ImageModule } from 'primeng/image';
 import { InputTextModule } from 'primeng/inputtext';
 import { SidebarModule } from 'primeng/sidebar';
+import { RippleModule } from 'primeng/ripple';
 @Component({
   standalone: true,
   imports: [
@@ -25,6 +26,7 @@ import { SidebarModule } from 'primeng/sidebar';
   InputTextModule,
   ImageModule,
   SidebarModule,
+  RippleModule
 
   
     

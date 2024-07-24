@@ -3,17 +3,15 @@ $primary: hsl(5, 85%, 63%);
 $secondary: hsl(240, 100%, 5%);
 $text-color: hsl(36, 100%, 99%);
 $sub-text-color: hsl(233, 8%, 79%);
-$highlight:hsl(35, 77%, 62%);
+$highlight: hsl(35, 77%, 62%);
 $art-Sub-Color: hsl(236, 13%, 42%);
-
-
 
 //Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
 //PrimeNG
 @import 'primeng/resources/themes/lara-light-blue/theme.css';
 @import 'primeng/resources/primeng.css';
-@import "primeicons/primeicons.css";
+@import 'primeicons/primeicons.css';
 
 //Font
 @font-face {
@@ -27,21 +25,26 @@ $art-Sub-Color: hsl(236, 13%, 42%);
 /* Reset CSS */
 @layer reset {
   @media screen and (max-width: 989px) {
-   .margin{
-    margin-bottom: 100px;
-   }
- }
-  button {
+    .margin {
+      margin-bottom: 100px;
+    }
+  }
+  button{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    
+  }
+  .button {
     background-color: $primary;
     border: none;
-    color: black;
-    width: 50%;
+    color: $secondary;
+    width: 200px;
     height: 40px;
     padding: 5px, 5px, 5px, 5px;
-   
+    letter-spacing: 6px;
   }
 
-  button:hover {
+  .button:hover {
     background-color: $secondary;
     color: $text-color;
   }
@@ -49,6 +52,7 @@ $art-Sub-Color: hsl(236, 13%, 42%);
 
 //Regular Items
 body {
+  background: white;
   //Font
   font-family: 'Inter';
   font-weight: 400;
@@ -59,31 +63,47 @@ body {
   max-height: 100vh;
   margin: 0%;
 }
-.sub-Text{
-  color:$sub-text-color;
+.sidebar{
+  color: $secondary;
+  font-weight: 400;
+  font-size: 20px;
 }
-.btn{
+.web3{ 
+ line-height: 50px;
+  color: $secondary;
+  font-weight: 800;
+  font-size: 45px;
+  white-space: wrap;
+}
+.main-art {
+  color: $secondary;
+  font-size: 15px;
+  white-space: wrap;
+}
+.sub-Text {
+  color: $sub-text-color;
+}
+.btn {
   width: 200px;
 }
 //New Articles Section
 .New-Articles {
   background-color: $secondary;
   color: $text-color;
-  padding:30px 10px 30px 30px ;
+  padding: 30px 10px 30px 30px;
   text-align: start;
   justify-content: center;
   align-items: center;
-  .New{
-color: $highlight ;
-font-size: 35px;
-font-weight: 700;
+  .New {
+    color: $highlight;
+    font-size: 35px;
+    font-weight: 700;
   }
 
   .title {
     font-size: 18px;
     font-weight: 700;
   }
- 
 
   .space {
     background-color: aliceblue;
@@ -92,31 +112,29 @@ font-weight: 700;
   }
 }
 
-
 //Bottom Section Artices
 @media screen and (min-width: 990px) {
-   .Row{
-display: flex;
-flex-direction: row;
-   }
+  .Row {
+    display: flex;
+    flex-direction: row;
+  }
 }
-.art-Title{
+.art-Title {
   font-size: 15px;
-color: $secondary;
-font-weight: 700;
+  color: $secondary;
+  font-weight: 700;
 }
-.art-Sub-Title{
+.art-Sub-Title {
   font-size: small;
-color:$art-Sub-Color ;
+  color: $art-Sub-Color;
 }
 
-    .padding{
-margin-right: 50px;
-    }
- 
+.padding {
+  margin-right: 50px;
+}
 
 .Number {
-    font-weight: 700;
-    font-size: 30px;
+  font-weight: 700;
+  font-size: 30px;
   color: $primary;
 }

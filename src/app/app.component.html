@@ -10,13 +10,20 @@
     </div>
     <div class="p-toolbar-group-end ">
         <p-sidebar [(visible)]="sideBarVisible" position="right">
-            <h3>Right Sidebar</h3>
+            <div class="col ps-4 justify-content-center align-items-center w-100 h-100 sidebar">
+                <div class="row pt-4 " routerLink="">Home</div>
+                <div class="row pt-4" routerLink="">New</div>
+                <div class="row pt-4" routerLink="">Popular</div>
+                <div class="row pt-4" routerLink="">Trending</div>
+                <div class="row pt-4" routerLink="">Catagories</div>
+    
+            </div>
         </p-sidebar>
         <div class="row">
-            <p-button class="btn d-lg-none d-xl-none" (onClick)="isSideBarVisible()" severity="secondary">
-                <i class="pi-bars" style="font-size: 2.5rem"  ></i>
+            <p-button class=" d-lg-none d-xl-none" size="small"  (onClick)="isSideBarVisible()" >
+                <i class="pi-bars" style="color: #000000"  ></i>
             </p-button>
-         
+
         </div>
         <div class="row d-none d-lg-flex d-xl-flex">
             <div class="col" routerLink="">Home</div>
@@ -24,28 +31,30 @@
             <div class="col" routerLink="">Popular</div>
             <div class="col" routerLink="">Trending</div>
             <div class="col" routerLink="">Catagories</div>
-              
+
         </div>
-        
+
     </div>
 </p-toolbar>
 
 <!--Main Page Start Here-->
-<div class=" row pt-4 ps-4 pe-4 w-100 h-100 " id="main">
+<div class=" row pt-4 ps-4 pe-4w-100 h-100 " id="main">
     <div class="col-lg-8 col-sm-12 ">
         <div class="row w-100 mb-4">
             <p-image src="\assets\images\image-web-3-desktop.jpg" alt="Image" width="100%" />
         </div>
 
         <div class="row w-100 ">
-            <div class="col-lg-6  col-sm-12"> The Bright Future of Web 3.0?</div>
+            <div class="web3 col-lg-6  col-sm-12"> <span class="web3">
+                    The Bright Future of Web 3.0?
+                </span> </div>
             <div class="col-lg-6 col-sm-12">
-                <div class="row  w-100"> We dive into the next evolution of the web that claims to put the
-                    power of the
-                    platforms
-                    back into the hands of the
-                    people. But is it really <br> fulfilling its promise?</div>
-                <div class="row margin pt-4 "><p-button  class="read ps-0 w-100 " label="R e a d  M o r e"></p-button></div>
+                <div class="row main-art"> We dive into the next evolution of the web that claims to put the power of
+                    the
+                    platforms back into the hands of the people. But is it really fulfilling its promise?</div>
+                <div class="row margin pt-4 "><p-button styleClass="button" class="ps-0 text-align-center "
+                        label="READ   MORE"></p-button>
+                </div>
             </div>
         </div>
 
@@ -57,23 +66,25 @@
             <div class="row mt-2 sub-Text"> Will hydrogen-fueled cars ever catch up to EVs?</div>
             <div class="row space mt-4"></div>
         </span>
-       
-        <span  class=" " >
+
+        <span class=" ">
             <div class="row title mt-4"> The Downsides of AI Artistry</div>
-            <div class="row mt-2 sub-Text"> What are the possible adverse effects of <br> on-demand AI image generation?</div>
+            <div class="row mt-2 sub-Text"> What are the possible adverse effects of <br> on-demand AI image generation?
+            </div>
             <div class="row space mt-4"></div>
         </span>
-       
-        <span  class="">
+
+        <span class="">
             <div class="row title mt-4 "> Is VC Funding Drying Up?</div>
-            <div class="row mt-2 sub-Text"> Private funding by VC firms is down 50% <br> YOY. We take a look at what that means.</div>
+            <div class="row mt-2 sub-Text"> Private funding by VC firms is down 50% <br> YOY. We take a look at what
+                that means.</div>
         </span>
 
     </div>
 
     <!--Bottom Row Starts Here-->
 
-    <div class="Row row-cols-lg-3 row-cols-sm-1 row-cols-md-1  pt-4">
+    <div class="Row row-cols-lg-3 row-cols-sm-1 row-cols-md-1  pb-4  pt-4">
         <div class="col ">
             <div class="row">
                 <div class="col-2 padding
